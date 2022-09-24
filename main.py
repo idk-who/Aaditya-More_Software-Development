@@ -55,7 +55,7 @@ def if_present_then_remove(d1, d2):
         else:
             break
 
-    return count
+    return d1, count
 
 def find_digits(inp):
     """
@@ -72,7 +72,7 @@ def find_digits(inp):
     final_ans = ""
 
     for i in range(len(special_words)):
-        n = if_present_then_remove(input_contents, special_words[i])
+        input_contents, n = if_present_then_remove(input_contents, special_words[i])
         final_ans = final_ans + str(i)*n
 
     return final_ans
